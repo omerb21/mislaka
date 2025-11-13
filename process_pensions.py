@@ -592,23 +592,79 @@ class PensionFileProcessor:
 
     def _get_product_type(self, account_elem) -> str:
         plan_name_tags = ['SHEM-TOCHNIT', 'TOCHNIT', 'SHEM_TOCHNIT']
+        plan_names: list[str] = []
         for tag in plan_name_tags:
             names = self._collect_tag_values(account_elem, tag, include_parents=True)
             for name in names:
-                normalized = name.strip()
-                if normalized and 'השתלמות' in normalized:
-                    return 'קרן השתלמות'
+                normalized = (name or '').strip()
+                if normalized:
+                    plan_names.append(normalized)
+
+        name_type: str | None = None
+        for name in plan_names:
+            name_lower = name.lower()
+            if 'השתלמות' in name:
+                name_type = 'קרן השתלמות'
+                break
+            if 'פנסיה' in name or 'מקפת' in name or 'עתודות' in name:
+                name_type = 'קרן פנסיה'
+                break
+            if 'גמל' in name:
+                name_type = 'קופת גמל'
+                break
+            if 'ביטוח' in name and ('חיים' in name or 'מנהלים' in name or 'מנהל' in name):
+                if 'מקפת' in name or 'פנסיה' in name:
+                    name_type = 'קרן פנסיה'
+                    break
+                name_type = 'פוליסת ביטוח חיים'
+                break
+            if 'חיסכון' in name or 'savings' in name_lower:
+                name_type = 'פוליסת חיסכון טהור'
+                break
 
         codes = self._collect_tag_values(account_elem, 'SUG-MUTZAR', include_parents=True)
         if not codes:
             code = self._get_text(account_elem, 'SUG-MUTZAR')
             codes = [code] if code else []
 
+        code_type: str | None = None
         for code in codes:
-            if code in PRODUCT_TYPE_MAP:
-                return PRODUCT_TYPE_MAP[code]
+            normalized_code = (code or '').strip()
+            if not normalized_code:
+                continue
+            mapped = PRODUCT_TYPE_MAP.get(normalized_code)
+            if mapped:
+                code_type = mapped
+                break
 
-        return codes[0] if codes else ''
+        if code_type and name_type:
+            if code_type == name_type:
+                return code_type
+            if code_type in {
+                'פוליסת ביטוח חיים משולב חיסכון',
+                'פוליסת ביטוח חיים',
+                'פוליסת חיסכון טהור',
+            }:
+                if name_type in {'קרן פנסיה', 'קרן השתלמות'}:
+                    return name_type
+                return code_type
+            return name_type
+
+        if name_type:
+            return name_type
+
+        if code_type:
+            return code_type
+
+        if plan_names:
+            return plan_names[0]
+
+        for code in codes:
+            normalized_code = (code or '').strip()
+            if normalized_code:
+                return normalized_code
+
+        return ''
 
     def _collect_employer_names(self, account_elem) -> list[str]:
         names: list[str] = []
