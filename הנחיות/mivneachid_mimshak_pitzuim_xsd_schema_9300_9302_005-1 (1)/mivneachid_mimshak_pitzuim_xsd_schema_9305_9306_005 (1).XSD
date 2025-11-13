@@ -1,0 +1,1413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema version="1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="MimshakPitzuin">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="KoteretKovetz" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SUG-MIMSHAK" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				סוג הממשק
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:enumeration value="17" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-GIRSAT-XML" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+					מספר גרסא ראשי 
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="005" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="TAARICH-BITZUA" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				תאריך ושעת יצירת הקובץ
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="([0-9]\d{3}((0[1-9]|1[012])(0[1-9]|1\d|2[0-8])|(0[13456789]|1[012])(29|30)|(0[13578]|1[02])31)|(15(8[48]|9[26])|(1[6-9]|[2-9]\d)(0[48]|[13579][26]|[2468][048])|([2468][048]|16|3579[26])00)0229)((0[0-9]|1[0-9]|2[0-3])([0-5]\d){2})" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="KOD-SVIVAT-AVODA" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+					1 = TEST
+					2 = PRODUCTION
+					</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:enumeration value="1" />
+                    <xsd:enumeration value="2" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-HAKOVETZ" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				מספר הקובץ
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:length value="34" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-SIDURI" minOccurs="1" nillable="true">
+                <xsd:annotation>
+                  <xsd:documentation>
+				מספר סידורי של הקובץ 
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:totalDigits value="4" />
+                    <xsd:minInclusive value="0" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="NetuneiGoremSholech" minOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="KOD-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = יצרן
+						2 = מסלקה
+						3 = מפיץ
+						4 = חוסך
+						5 = מעסיק
+						6 = לשכת שירות
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />
+                          <xsd:enumeration value="2" />
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="6" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SUG-MEZAHE-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = ח.פ
+						2 = ח.צ
+						3 = ת.ז 
+						4 = דרכון
+						5 = עוסק מורשה
+						7 = עמותה
+						8 = אגודה שיתופית
+						9 = חברה ממשלתית
+						10 = איגוד
+						11 = שותפות
+						12 = מספר בעל רישיון
+						13= יישות ללא רשם
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />
+                          <xsd:enumeration value="2" />
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="7" />
+                          <xsd:enumeration value="8" />
+                          <xsd:enumeration value="9" />
+                          <xsd:enumeration value="10" />
+                          <xsd:enumeration value="11" />
+                          <xsd:enumeration value="12" />
+                          <xsd:enumeration value="13" />						  
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-ZIHUI-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר זיהוי גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-GOREM-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="100" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-PRATI-ISH-KESHER-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם פרטי - איש קשר גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="20" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-MISHPACHA-ISH-KESHER-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם משפחה - איש קשר גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="20" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-TELEPHONE-KAVI-ISH-KESHER-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר טלפון קווי - איש קשר גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]+" />							
+                          <xsd:maxLength value="11" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="E-MAIL-ISH-KESHER-SHOLECH" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						כתובת דוא"ל - איש קשר גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="50" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-CELLULARI-ISH-KESHER-SHOLECH" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						טלפון סלולארי - איש קשר גורם שולח
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]+" />							
+                          <xsd:maxLength value="15" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+					<xsd:element name="MISPAR-ZIHUI-ETZEL-YATZRAN-NIMAAN" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר מזהה פנימי אצל יצרן 
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="NetuneiGoremNimaan" minOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="KOD-NIMAAN" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = יצרן
+						2 = מסלקה
+						3 = מפיץ
+						4 = חוסך
+						5 = מעסיק
+						6 = לשכת שירות
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />
+                          <xsd:enumeration value="2" />
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="6" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SUG-MEZAHE-NIMAAN" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = ח.פ
+						2 = ח.צ
+						3 = ת.ז 
+						4 = דרכון
+						5 = עוסק מורשה
+						7 = עמותה
+						8 = אגודה שיתופית
+						9 = חברה ממשלתית
+						10 = איגוד
+						11 = שותפות
+						12 = מספר בעל רישיון
+						13= יישות ללא רשם
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />
+                          <xsd:enumeration value="2" />
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="7" />
+                          <xsd:enumeration value="8" />
+                          <xsd:enumeration value="9" />
+                          <xsd:enumeration value="10" />
+                          <xsd:enumeration value="11" />
+                          <xsd:enumeration value="12" />
+                          <xsd:enumeration value="13" />						  
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-ZIHUI-NIMAAN" minOccurs="1">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר זיהוי גורם נמען
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-ZIHUI-ETZEL-YATZRAN-NIMAAN" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר מזהה אצל יצרן
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="GufHamimshak" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="YeshutGoremPoneLemislaka" minOccurs="1" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="SUG-PONE" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = יצרן
+						2 = מסלקה	
+						3=מפיץ
+						4=לקוח
+						5=מעסיק
+						6=לשכת שירות
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />						
+                          <xsd:enumeration value="2" />							
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="6" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SUG-KOD-MEZAHE-PONE" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						ערכים:
+						1 = ח.פ
+						2 = ח.צ
+						3 = ת.ז 
+						4 = דרכון
+						5 = עוסק מורשה
+						7 = עמותה
+						8 = אגודה שיתופית
+						9 = חברה ממשלתית
+						10 = איגוד
+						11 = שותפות
+						12 = מספר בעל רישיון
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:int">
+                          <xsd:enumeration value="1" />
+                          <xsd:enumeration value="2" />
+                          <xsd:enumeration value="3" />
+                          <xsd:enumeration value="4" />
+                          <xsd:enumeration value="5" />
+                          <xsd:enumeration value="7" />
+                          <xsd:enumeration value="8" />
+                          <xsd:enumeration value="9" />
+                          <xsd:enumeration value="10" />
+                          <xsd:enumeration value="11" />
+                          <xsd:enumeration value="12" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-MEZAHE-PONE" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר מזהה פונה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-GOREM-PONE" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם גורם פונה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="50" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-MEZAHE-METAFEL" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר מזהה מתפעל
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="16" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-PRATI-PONE-LEMISLAKA" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם פרטי - איש קשר גורם פונה למסלקה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="20" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="SHEM-MISHPACHA-PONE-LEMISLAKA" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						שם משפחה - איש קשר גורם פונה למסלקה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="20" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-TELEPHONE-KAVI-PONE-LEMISLAKA" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						מספר טלפון קווי - איש קשר גורם פונה למסלקה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]+" />							
+                          <xsd:maxLength value="11" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="E-MAIL-PONE-LEMISLAKA" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						כתובת דוא"ל - איש קשר גורם פונה למסלקה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="50" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MISPAR-CELLULARI" minOccurs="1" nillable="true">
+                      <xsd:annotation>
+                        <xsd:documentation>
+						טלפון סלולארי - איש קשר גורם פונה למסלקה
+						</xsd:documentation>
+                      </xsd:annotation>
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]+" />							
+                          <xsd:maxLength value="15" />
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>				
+					<xsd:element name="BasicClientDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="entityType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								ערכים מוגדרים בלבד :
+								4 = לקוח
+								5 = מעסיק נוכחי
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="4" />
+                                <xsd:enumeration value="5" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="idType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+							ערכים מוגדרים בלבד :
+								1 = ח.פ
+								2 = ח.צ
+								3 = ת.ז 
+								4 = דרכון
+								5 = מספר עמותה
+								6 = אגודה שיתופית
+								7 = חברה ממשלתית
+								8 = איגוד
+								9 = שותפות
+								10 = מספר בעל רישיון
+								11 = רשות ממשלתית
+								12 = תיק ניכויים
+								13 = תאגיד
+								14 = ישות ללא רשם
+								15 = תעודת מסע
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />							  
+                                <xsd:enumeration value="2" />							  
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />	
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                                <xsd:enumeration value="7" />
+                                <xsd:enumeration value="8" />
+                                <xsd:enumeration value="9" />
+                                <xsd:enumeration value="10" />
+                                <xsd:enumeration value="11" />
+                                <xsd:enumeration value="12" />
+                                <xsd:enumeration value="13" />
+                                <xsd:enumeration value="14" />	
+                                <xsd:enumeration value="15" />									
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CountryCode" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								קוד מדינה    
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="3" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 						  
+                          <xsd:element name="idNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר זיהוי     
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="16" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+                      <xsd:element name="entityName" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם יישות 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                      </xsd:element>
+                      <xsd:element name="firstName" minOccurs="1"  nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם פרטי 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                     <xsd:element name="lastName" minOccurs="1"  nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם משפחה 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                    </xsd:element> 
+                     <xsd:element name="clearingHouseNumber" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספק מסלקה 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="36" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                    </xsd:element> 	
+                    <xsd:element name="uniqueRecord" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר מזהה רשומה 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="74" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                    </xsd:element> 	
+
+					<xsd:element name="TitleEmployerDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="entityType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								ערכים מוגדרים בלבד :
+								5 = מעסיק נוכחי
+								6 = מעסיק קודם
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="idType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+							ערכים מוגדרים בלבד :
+							1 = ח.פ
+							2 = ח.צ
+							3 = ת.ז 
+							4 = דרכון
+							5 = מספר עמותה
+							6 = אגודה שיתופית
+							7 = חברה ממשלתית
+							8 = איגוד
+							9 = שותפות
+							10 = מספר בעל רישיון
+							11 = רשות ממשלתית
+							12 = תיק ניכויים
+							13 = תאגיד
+							14 = ישות ללא רשם
+							15 = תעודת מסע 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                                <xsd:enumeration value="7" />
+                                <xsd:enumeration value="8" />
+                                <xsd:enumeration value="9" />
+                                <xsd:enumeration value="10" />
+                                <xsd:enumeration value="11" />
+                                <xsd:enumeration value="12" />
+                                <xsd:enumeration value="13" />
+                                <xsd:enumeration value="14" />
+                                <xsd:enumeration value="15" />								
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 						  
+                          <xsd:element name="idNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר זיהוי     
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="16" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+                      <xsd:element name="entityName" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם יישות 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                     <xsd:element name="DeducationFileNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר תיק ניכויים
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="9" />
+                              </xsd:restriction>
+                            </xsd:simpleType> 
+					</xsd:element> 						
+				<xsd:element name="TitleInstitutionalBodyDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="entityType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								ערכים מוגדרים בלבד :
+								1 = גוף מוסדי
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="idType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+							ערכים מוגדרים בלבד :
+								1 = ח.פ
+								2 = ח.צ
+								3 = ת.ז 
+								4 = דרכון
+								5 = מספר עמותה
+								6 = אגודה שיתופית
+								7 = חברה ממשלתית
+								8 = איגוד
+								9 = שותפות
+								10 = מספר בעל רישיון
+								11 = רשות ממשלתית
+								12 = תיק ניכויים
+								13 = תאגיד
+								14 = ישות ללא רשם
+								15 = תעודת מסע
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />							  
+                                <xsd:enumeration value="2" />							  
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />	
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                                <xsd:enumeration value="7" />
+                                <xsd:enumeration value="8" />
+                                <xsd:enumeration value="9" />
+                                <xsd:enumeration value="10" />
+                                <xsd:enumeration value="11" />
+                                <xsd:enumeration value="12" />
+                                <xsd:enumeration value="13" />
+                                <xsd:enumeration value="14" />	
+                                <xsd:enumeration value="15" />								
+                              </xsd:restriction>
+                            </xsd:simpleType> 
+                           </xsd:element> 						  
+                          <xsd:element name="idNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר זיהוי     
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="16" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+                      <xsd:element name="entityName" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם יישות 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                     <xsd:element name="DeducationFileNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר תיק ניכויים
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="9" />
+                              </xsd:restriction>
+                            </xsd:simpleType> 
+					</xsd:element> 
+					<xsd:element name="TitleFundType" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>						  
+                          <xsd:element name="fundType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								ערכים מוגדרים בלבד : 
+								1 = קופת ביטוח
+								2 = קרן פנסיה חדשה
+								3 = קופת גמל לחיסכון
+								13 = קרן פנסיה ותיקה
+								14 = קופת גמל בניהול אישי
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="13" />
+                                <xsd:enumeration value="14" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+					<xsd:element name="TitleFundDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="fundCode" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								קוד קופה 
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="30" />	
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>	
+                      <xsd:element name="fundName" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם קופה
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="pensionType" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								סוג פנסיה  - אחד מן הערכים הבאים: 
+								1 = יסוד
+								2 = מקיפה
+								3 = כללית
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                    <xsd:element name="DeducationFileNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר תיק ניכויים
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="9" />
+                              </xsd:restriction>
+                            </xsd:simpleType> 
+					</xsd:element> 	
+					<xsd:element name="TitleAccountOrPolicyDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>	
+                      <xsd:element name="accountOrPolicyNumber" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								מספר חשבון או פוליסה
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="15" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="policyType" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								סוג פוליסה - ערכים מוגדרים בלבד :
+								1 = קלאסי
+								2 = עדיף
+								3 = פוליסות משנת 2004 ואילך
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="AccountStatus" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								מעמד - ערכים מוגדרים בלבד :
+								1 = שכיר
+								2 = עצמאי
+								3 = שכיר ועצמאי
+								4 = בעל שליטה 
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />								
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                      <xsd:element name="policyName" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שם תוכנית/מוצר
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+ 					<xsd:element name="SeverancePayPeriodOfEmploymentAndStatus" minOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>	
+                        <xsd:element name="startWorkDate" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך תחילת העסקה
+								</xsd:documentation>
+                            </xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:date">
+									</xsd:restriction>
+								</xsd:simpleType>
+						</xsd:element>	
+                        <xsd:element name="endWorkDate" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך סיום העסקה
+								</xsd:documentation>
+                            </xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:date">
+									</xsd:restriction>
+								</xsd:simpleType>
+						</xsd:element>	
+                        <xsd:element name="FirstEmployerDeposit" minOccurs="1">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך הפקדה ראשונה ממעסיק
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>	
+                        <xsd:element name="lastEmployerDeposit" minOccurs="1" >
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך הפקדה אחרונה ממעסיק
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>	
+                       <xsd:element name="salaryMonthLastEmployerDeposit" minOccurs="1">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תחודש שכר אחרון להפקדה 
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+                         <xsd:element name="article14" minOccurs="1" >
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								סעיף 14 - מעמד נוכחי לכספי פיצויים לצורך התחשבנות: 
+								ערכים מוגדרים בלבד :
+								1 = דווח כי העובד חתום על סעיף 14
+								2 = לא דווח כי העובד חתום על סעיף 14
+								</xsd:documentation>
+                            </xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:int">
+										<xsd:enumeration value="1" />
+										<xsd:enumeration value="2" />
+									</xsd:restriction>
+								</xsd:simpleType>
+                        </xsd:element>	
+                         <xsd:element name="CurrentSeverancePayStatus" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								מעמד נוכחי לכספי פיצויים  - ערכים מוגדרים בלבד : 
+								1 = זכאות בלא תנאי
+								2 = לפי חוק פיצויי פיטורין
+								3 = לפי חוק פיצויי פיטורין - שחרור אוטומאטי
+								4 = זכאות בתום  4 חודשים מניתוק יחסי עבודה
+								5 =  לא זכאי לכספי פיצויים
+								</xsd:documentation>
+                            </xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:int">
+										<xsd:enumeration value="1" />
+										<xsd:enumeration value="2" />
+										<xsd:enumeration value="3" />
+										<xsd:enumeration value="4" />
+										<xsd:enumeration value="5" />
+									</xsd:restriction>
+								</xsd:simpleType>
+                        </xsd:element>	
+                        <xsd:element name="SeveranceStatusEffectiveDateArticle14" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך כניסה לתוקף -סעיף 14 
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>						  
+                        <xsd:element name="article14StartDateVariation" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								האם קיימת שונות לעניין תאריך כניסה לתוקף של סעיף 14 - ערכים מוגדרים בלבד :
+								1 = כן 
+								2 = לא
+								</xsd:documentation>
+                            </xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:int">
+										<xsd:enumeration value="1" />
+										<xsd:enumeration value="2" />
+									</xsd:restriction>
+								</xsd:simpleType>
+                        </xsd:element>	
+                        </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>	
+					<xsd:element name="SeverancePayBalanceDetails" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>						  
+                          <xsd:element name="AccountComponentType" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								סוג מרכיב חשבון - ערכים מוגדרים בלבד :
+								1 = פיצויים
+								10 = תגמולים פרט (כספי פיצויים שעברו התחשבנות לפני 2012 טרם תיקון 190)
+								15 = כספי פיצויים אשר בוצעה בגינם התחשבנות והושארו בקופה לתגמולים
+								16 = כספי פיצויים אשר בוצעה בגינם התחשבנות והועברו לחשבון חדש
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />	
+                                <xsd:enumeration value="10" />	
+                                <xsd:enumeration value="15" />	
+                                <xsd:enumeration value="16" />									
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+                          <xsd:element name="AccumulationBalanceAmountForRedemptionForTax" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								סכום יתרה צבורה - ערך פידיון פיצויים למס 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="10" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>	
+                          <xsd:element name="SeveranceAmountActuallyORForRedemptionForEmployer" minOccurs="1" >
+                            <xsd:annotation>
+                              <xsd:documentation>
+							סכום יתרה צבורה - ערך פידיון פיצויים למעסיק
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="10" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        <xsd:element name="estimatedBalanceAmountDate" minOccurs="1" >
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך שיערוך היתרה צבורה  
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>	
+                         <xsd:element name="SeverancePayAmountUntilEntryDateArticle14" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שיערוך יתרת פיצויים עד כניסתו לתוקף של סעיף 14 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="10" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="pensionFromBalanceSeveranceForRedemptionForTax" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								סכום שהומר לקצבה - ערך פידיון פיצויים למס 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="10" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="pensionFromBalanceSeveranceRedemptionForEmployer" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								סכום שהומר לקצבה (ערך פידיון פיצויים למעסיק)
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="10" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                        <xsd:element name="conversionToPansionDate" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+								<xsd:documentation>
+								חודש המרה לקצבה  
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+                          <xsd:element name="sumOfpensionFromBalanceSeverance" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								שסכום קצבה שמקורה מכספי פיצויים שהפריש מעסיק נוכחי 
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="7" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>	
+                          <xsd:element name="previousEmployerSeveranceBalance" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+                              <xsd:documentation>
+								יתרת כספי פיצויים במועד סיום העסקה ממעסיק קודם  
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="9" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>	
+                       <xsd:element name="previousEmployerLastDepositDate" minOccurs="1" nillable="true">
+                            <xsd:annotation>
+								<xsd:documentation>
+								תאריך אחרון בו התקבלה הפקדה ממעסיק קודם.  
+								</xsd:documentation>
+                            </xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:date">
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					<xsd:element name="SeverancePayBalanceDetailsUnderPayerAndTaxLayer" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>						  
+                          <xsd:element name="PayerTypeCode" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								קוד משלם - ערכים מוגדרים בלבד :
+								3 = קופה מרכזית לפיצויים (כולל המוסד לביטוח לאומי המשלם מענק בעקבות פירוק או פשיטת רגל).
+								4 = קופת גמל לפיצויים או לתגמולים שבמקור בה הופקדו כספים ברכיב הפיצויים על ידי המעסיק לטובת העובד.
+								5 = קופת פנסיה וותיקה.
+								6 = קופת גמל לקצבה.
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                          <xsd:element name="SeveranceStatusTypeCode" minOccurs="1">
+                            <xsd:annotation>
+                              <xsd:documentation>								
+								קוד מעמד כספי פיצויים - ערכים מוגדרים בלבד : 
+								1 = כספי פיצויים שלא חויבו בשווי
+								2 = כספי פיצויים שחוייבו בשווי נומינאלי
+								3 = כספי הפיצויים שחוויבו בשווי ראלי
+								4 = רצף פיצויים
+								5 = רצף קצבה
+								6 = כספי פיצויים שלא חויבו בשווי ולא עברו התחשבנות.
+								7 - כספי פיצויים שחוייבו בשווי (נומינאלי)
+								8 - סכום כספי הפיצויים שחוויבו בשווי (ראלי)
+								9 = כספי פיצויים שהושארו במעמד פרט לאחר התחשבנות
+								10= חשבון חדש
+								11 = כספי פיצויים שהושארו ככספים נזילים לפני 2008
+								12 = תגמולים פרט (כספי פיצויים שעברו התחשבנות לפני 2012 טרם תיקון 190)	
+								13 = כספי פיצויים אשר בוצעה בגינם התחשבנות והושארו בקופה לתגמולים
+								</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:int">
+                                <xsd:enumeration value="1" />
+                                <xsd:enumeration value="2" />
+                                <xsd:enumeration value="3" />
+                                <xsd:enumeration value="4" />
+                                <xsd:enumeration value="5" />
+                                <xsd:enumeration value="6" />
+                                <xsd:enumeration value="7" />
+                                <xsd:enumeration value="8" />
+                                <xsd:enumeration value="9" />
+                                <xsd:enumeration value="10" />
+                                <xsd:enumeration value="11" />
+                                <xsd:enumeration value="12" />	
+                                <xsd:enumeration value="13" />								
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>						  
+                        <xsd:element name="SeveranceAmountForStatusTypeCode" minOccurs="1" >
+                            <xsd:annotation>
+                              <xsd:documentation>
+								סכום לקוד מעמד כספי פיצויים  
+							</xsd:documentation>
+                            </xsd:annotation>
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:decimal">
+                                <xsd:totalDigits value="9" />
+                                <xsd:fractionDigits value="2" />
+                                <xsd:minInclusive value="0" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 						
+                      </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>	
+                        </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>						  
+                        </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>
+                      </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>	
+                      </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>
+                        </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>
+                        </xsd:sequence>
+                       </xsd:complexType>
+                      </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>	
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+          <xsd:element name="ReshumatSgira" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="MISPAR-YATZRANIM" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				מספר יצרנים בקובץ 
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:totalDigits value="9" />
+                    <xsd:minExclusive value="0" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-MAAVIDIM" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				מספר מעבידים בקובץ 
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:totalDigits value="9" />
+                    <xsd:minExclusive value="0" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-RESHUMOT" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+				מספר רשומות בקובץ 
+				</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:totalDigits value="9" />
+                    <xsd:minExclusive value="0" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="MISPAR-OVDIM" minOccurs="1">
+                <xsd:annotation>
+                  <xsd:documentation>
+					מספר עובדים בקובץ
+					</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:int">
+                    <xsd:totalDigits value="9" />
+                    <xsd:minExclusive value="0" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

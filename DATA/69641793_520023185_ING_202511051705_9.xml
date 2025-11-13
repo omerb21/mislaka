@@ -1,0 +1,584 @@
+<Mimshak>
+  <KoteretKovetz>
+    <SUG-MIMSHAK>2</SUG-MIMSHAK>
+    <MISPAR-GIRSAT-XML>009</MISPAR-GIRSAT-XML>
+    <TAARICH-BITZUA>20251104153828</TAARICH-BITZUA>
+    <KOD-SVIVAT-AVODA>2</KOD-SVIVAT-AVODA>
+    <KIVUN-MIMSHAK-XML>4</KIVUN-MIMSHAK-XML>
+    <KOD-SHOLEACH>520023185</KOD-SHOLEACH>
+    <SHEM-SHOLEACH>הפניקס חברה לביטוח בע"מ</SHEM-SHOLEACH>
+    <KOD-MEZAHE-METAFEL>520023185</KOD-MEZAHE-METAFEL>
+    <SHEM-METAFEL>הפניקס חברה לביטוח בע"מ</SHEM-METAFEL>
+    <MEZAHE-HAAVARA>004000520023185CONSLTING009202511041538241806.DAT</MEZAHE-HAAVARA>
+    <MISPAR-HAKOVETZ>20251104153824520023185</MISPAR-HAKOVETZ>
+  </KoteretKovetz>
+  <YeshutYatzran>
+    <KOD-MEZAHE-YATZRAN>520023185</KOD-MEZAHE-YATZRAN>
+    <SHEM-YATZRAN>הפניקס חברה לביטוח בע"מ</SHEM-YATZRAN>
+    <MEZAHE-LAKOACH-MISLAKA p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+    <IshKesherYeshutYatzran>
+      <SHEM-PRATI>מוקד קשרי לקוחות</SHEM-PRATI>
+      <SHEM-MISHPACHA>FNX4U</SHEM-MISHPACHA>
+      <ERETZ p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <SHEM-YISHUV p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <SEMEL-YESHUV p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <SHEM-RECHOV p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-BAIT p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-KNISA p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-DIRA p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MIKUD p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <TA-DOAR p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-TELEPHONE-KAVI>03-7332222</MISPAR-TELEPHONE-KAVI>
+      <MISPAR-SHLUCHA p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-CELLULARI p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <MISPAR-FAX p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+      <E-MAIL>INFO@FNX.CO.IL</E-MAIL>
+      <HEAROT p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    </IshKesherYeshutYatzran>
+    <YeshutMetafel>
+      <KOD-MEZAHE-METAFEL>520023185</KOD-MEZAHE-METAFEL>
+      <SHEM-METAFEL>הפניקס חברה לביטוח בע"מ</SHEM-METAFEL>
+      <IshKesherYeshutMetafel>
+        <SHEM-PRATI>מוקד קשרי לקוחות</SHEM-PRATI>
+        <SHEM-MISHPACHA>FNX4U</SHEM-MISHPACHA>
+        <ERETZ>ישראל</ERETZ>
+        <SHEM-YISHUV p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <SEMEL-YESHUV p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <SHEM-RECHOV p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-BAIT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-KNISA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-DIRA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MIKUD p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <TA-DOAR p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-TELEPHONE-KAVI>03-7332222</MISPAR-TELEPHONE-KAVI>
+        <MISPAR-SHLUCHA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-CELLULARI p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <MISPAR-FAX p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+        <E-MAIL>INFO@FNX.CO.IL</E-MAIL>
+        <HEAROT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+      </IshKesherYeshutMetafel>
+    </YeshutMetafel>
+    <Mutzarim>
+      <Mutzar>
+        <YeshutNimaansofi>
+          <KOD-NIMAAN>3</KOD-NIMAAN>
+          <SUG-MEZAHE-NIMAAN>1</SUG-MEZAHE-NIMAAN>
+          <MISPAR-ZIHUI-NIMAAN>0000000059999999</MISPAR-ZIHUI-NIMAAN>
+          <MISPAR-ZIHUI-ETZEL-YATZRAN-NIMAAN p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+        </YeshutNimaansofi>
+        <NetuneiMutzar>
+          <KOD-MEZAHE-YATZRAN>520023185</KOD-MEZAHE-YATZRAN>
+          <KOD-MEZAHE-METAFEL>520023185</KOD-MEZAHE-METAFEL>
+          <SUG-MUTZAR>5</SUG-MUTZAR>
+          <SHEM-KOVETZ-MEKORI p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+          <MISPAR-SHURA-MEKORI p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+          <RESERVA-MISLAKA p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+          <MISPAR-MISLAKA>647E3AA9-4D8C-4D91-A501-836D33D782DB</MISPAR-MISLAKA>
+          <STATUS-RESHOMA>1</STATUS-RESHOMA>
+          <MISPAR-SHORA>1</MISPAR-SHORA>
+          <TOTAL-ZEHUT-PER-MONTH p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+          <TOTAL-MUTZARIM-PER-MONTH p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+          <YeshutMaasik>
+            <MPR-MAASIK-BE-YATZRAN>0000000069641793</MPR-MAASIK-BE-YATZRAN>
+            <SUG-MEZAHE-MAASIK>3</SUG-MEZAHE-MAASIK>
+            <MISPAR-MEZAHE-MAASIK>0000000069641793</MISPAR-MEZAHE-MAASIK>
+            <MISPAR-TIK-NIKUIIM p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <SHEM-MAASIK>ויוי זיו</SHEM-MAASIK>
+            <ERETZ>ישראל</ERETZ>
+            <SHEM-YISHUV>מזכרת בתיה</SHEM-YISHUV>
+            <SEMEL-YESHUV p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <SHEM-RECHOV p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-BAIT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-KNISA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-DIRA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MIKUD p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TA-DOAR p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-TELEPHONE-KAVI>08-9349204</MISPAR-TELEPHONE-KAVI>
+            <MISPAR-SHLUCHA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-CELLULARI>0505544299</MISPAR-CELLULARI>
+            <MISPAR-FAX p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <E-MAIL>ZIV.VIVI@GMAIL.COM</E-MAIL>
+            <HEAROT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+          </YeshutMaasik>
+          <YeshutLakoach>
+            <SUG-MEZAHE-LAKOACH>1</SUG-MEZAHE-LAKOACH>
+            <MISPAR-ZIHUY-LAKOACH>0000000069641793</MISPAR-ZIHUY-LAKOACH>
+            <SHEM-PRATI>ויוי</SHEM-PRATI>
+            <SHEM-MISHPACHA-KODEM p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <SHEM-MISHPACHA>זיו</SHEM-MISHPACHA>
+            <MIN>2</MIN>
+            <TAARICH-LEYDA>19620825</TAARICH-LEYDA>
+            <PTIRA>2</PTIRA>
+            <TAARICH-PTIRA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MATZAV-MISHPACHTI>2</MATZAV-MISHPACHTI>
+            <ERETZ>ישראל</ERETZ>
+            <SHEM-YISHUV>מזכרת בתיה</SHEM-YISHUV>
+            <SEMEL-YESHUV>28</SEMEL-YESHUV>
+            <SHEM-RECHOV>הסיגלית</SHEM-RECHOV>
+            <MISPAR-BAIT>30</MISPAR-BAIT>
+            <MISPAR-KNISA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-DIRA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MIKUD>76804</MIKUD>
+            <TA-DOAR p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-TELEPHONE-KAVI>08-9349204</MISPAR-TELEPHONE-KAVI>
+            <MISPAR-SHLUCHA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-CELLULARI>0505544299</MISPAR-CELLULARI>
+            <MISPAR-FAX p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <E-MAIL>ZIV.VIVI@GMAIL.COM</E-MAIL>
+            <HEAROT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-YELADIM p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+          </YeshutLakoach>
+        </NetuneiMutzar>
+        <HeshbonotOPolisot>
+          <HeshbonOPolisa>
+            <ASMACHTA-MEKORIT>0</ASMACHTA-MEKORIT>
+            <MISPAR-POLISA-O-HESHBON>5104102008</MISPAR-POLISA-O-HESHBON>
+            <SHEM-TOCHNIT>מניב משתתף</SHEM-TOCHNIT>
+            <KIDOD-ACHID>520023185000000000000000000000</KIDOD-ACHID>
+            <MPR-MEFITZ-BE-YATZRAN>000035992</MPR-MEFITZ-BE-YATZRAN>
+            <TAARICH-NECHONUT>20250930</TAARICH-NECHONUT>
+            <TAARICH-HITZTARFUT-MUTZAR>19960401</TAARICH-HITZTARFUT-MUTZAR>
+            <TAARICH-HITZTARFUT-RISHON>19960401</TAARICH-HITZTARFUT-RISHON>
+            <SUG-KEREN-PENSIA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <PENSIA-VATIKA-O-HADASHA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TAARICH-IDKUN-STATUS>20001201</TAARICH-IDKUN-STATUS>
+            <STATUS-POLISA-O-CHESHBON>2</STATUS-POLISA-O-CHESHBON>
+            <MEVUTACH p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TAARICH-TCHILA-RISK-ZMANI p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TOM-TOKEF-RISK-ZMANI p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <SUG-POLISA>2</SUG-POLISA>
+            <SUG-TOCHNIT-O-CHESHBON>5</SUG-TOCHNIT-O-CHESHBON>
+            <MADAD-BASIS>7284.00</MADAD-BASIS>
+            <AZMADA-LEALVAHA>2</AZMADA-LEALVAHA>
+            <TAARICH-ACHRON-MOTAV-MUVET p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <KOLEL-ZAKAUT-AGACH>4</KOLEL-ZAKAUT-AGACH>
+            <SHIOR-AGACH-MEUADOT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TAARICH-CIUM-AVTACHT-TESOA p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <MISPAR-GIMLAOT p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <TIKUN-190>2</TIKUN-190>
+            <KAYAM-KISUY-HIZONI p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <KISUY-ISHY-KVOZATI p4:nil="true" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance" />
+            <KtovetLemishloach>
+              <ERETZ>ישראל</ERETZ>
+              <SHEM-YISHUV p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SEMEL-YESHUV>0</SEMEL-YESHUV>
+              <SHEM-RECHOV p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MISPAR-BAIT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MISPAR-KNISA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MISPAR-DIRA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MIKUD>0</MIKUD>
+              <TA-DOAR p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+            </KtovetLemishloach>
+            <NetuneiAmitOmevutach>
+              <KOD-ZIHUY-LAKOACH>1</KOD-ZIHUY-LAKOACH>
+              <MISPAR-ZIHUY>0000000069641793</MISPAR-ZIHUY>
+            </NetuneiAmitOmevutach>
+            <NetuneiSheerim>
+              <Sheer>
+                <SUG-ZIKA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-ZIHUI-SHEERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <MISPAR-ZIHUY-SHEERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEM-PRATI-SHEERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEM-MISHPACHA-SHEERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEM-MISHPAHA-KODEM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <MIN p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-LEIDA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </Sheer>
+            </NetuneiSheerim>
+            <PerutShiabudIkul>
+              <HUTAL-SHIABUD>2</HUTAL-SHIABUD>
+              <HUTAL-IKUL>2</HUTAL-IKUL>
+            </PerutShiabudIkul>
+            <Halvaa>
+              <YESH-HALVAA-BAMUTZAR>2</YESH-HALVAA-BAMUTZAR>
+              <RAMAT-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MISDAR-SIDURI-SHEL-HAHALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SCHUM-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TAARICH-KABALAT-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TAARICH-SIYUM-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <YITRAT-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TKUFAT-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <RIBIT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SUG-RIBIT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SUG-HATZNMADA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TADIRUT-HECHZER-HALVAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SUG-HECHZER p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SCHUM-HECHZER-TKUFATI p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+            </Halvaa>
+            <PirteyTvia>
+              <YESH-TVIA>2</YESH-TVIA>
+              <MISPAR-TVIA-BE-YATZRAN>0</MISPAR-TVIA-BE-YATZRAN>
+              <MISPAR-KISUI-BE-YATZRAN p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SHEM-KISUI-BE-YATZRAN p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SUG-HATVIAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <OFEN-TASHLUM p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <KOD-STATUS-TVIAA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TAARICH-STATUS-TVIA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TAARICH-TECHILAT-TASHLUM p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <ACHUZ-MEUSHAR-O-K-A-SHICHRUR p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SCHUM-TVIA-MEUSHAR p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <ACHUZ-NECHUT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+            </PirteyTvia>
+            <YitraLefiGilPrisha>
+              <GIL-PRISHA>67.00</GIL-PRISHA>
+              <TOTAL-CHISACHON-MITZTABER-TZAFUY>404835.05</TOTAL-CHISACHON-MITZTABER-TZAFUY>
+              <TZVIRAT-CHISACHON-CHAZUYA-LELO-PREMIYOT>404835.05</TZVIRAT-CHISACHON-CHAZUYA-LELO-PREMIYOT>
+              <MEKADEM-MOVTACH-LEPRISHA>173.89</MEKADEM-MOVTACH-LEPRISHA>
+              <MEKADEM-HAVTACHST-TOCHELET>1</MEKADEM-HAVTACHST-TOCHELET>
+              <MEKADEM-HAVTACHST-TOCHELETPRISHA>1</MEKADEM-HAVTACHST-TOCHELETPRISHA>
+              <SHEM-MASLOL p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <MEKADEM-HAVTACHAT-TSUA>2</MEKADEM-HAVTACHAT-TSUA>
+              <MEKADEM-HAVTACHAT-TSUATKUFA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TKUFAT-HAGBALA-BESHANIM p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <TOCHELET-MASHPIA-KITZBA>2</TOCHELET-MASHPIA-KITZBA>
+              <TSUA-MASHPIA-KITZBA>1</TSUA-MASHPIA-KITZBA>
+              <SHEUR-PNS-ZIKNA-TZFUYA p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <Kupot>
+                <Kupa>
+                  <SUG-KUPA>1</SUG-KUPA>
+                  <SCHUM-KITZVAT-ZIKNA>2328.11</SCHUM-KITZVAT-ZIKNA>
+                  <KITZVAT-HODSHIT-TZFUYA>2328.11</KITZVAT-HODSHIT-TZFUYA>
+                  <ACHUZ-TSUA-BATACHAZIT>4.00</ACHUZ-TSUA-BATACHAZIT>
+                  <TOTAL-ITRA-TZFUYA-MECHUSHAV-LEHON-IM-PREMIOT>0.00</TOTAL-ITRA-TZFUYA-MECHUSHAV-LEHON-IM-PREMIOT>
+                  <TZVIRAT-CHISACHON-TZFUYA-LEHON-LELO-PREMIYOT>0.00</TZVIRAT-CHISACHON-TZFUYA-LEHON-LELO-PREMIYOT>
+                  <TOTAL-SCHUM-MTZBR-TZAFUY-LEGIL-PRISHA-MECHUSHAV-LEKITZBA-IM-PREMIYOT>404835.05</TOTAL-SCHUM-MTZBR-TZAFUY-LEGIL-PRISHA-MECHUSHAV-LEKITZBA-IM-PREMIYOT>
+                  <TOTAL-SCHUM-MITZVTABER-TZFUY-LEGIL-PRISHA-MECHUSHAV-HAMEYOAD-LEKITZBA-LELO-PREMIYOT>404835.05</TOTAL-SCHUM-MITZVTABER-TZFUY-LEGIL-PRISHA-MECHUSHAV-HAMEYOAD-LEKITZBA-LELO-PREMIYOT>
+                </Kupa>
+              </Kupot>
+            </YitraLefiGilPrisha>
+            <Tsua>
+              <SHEUR-TSUA-NETO>11.06</SHEUR-TSUA-NETO>
+              <SHEUR-TSUA-BRUTO-CHS-1 p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <SHEUR-TSUA-MOVTACHAT-MEYOADOT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <REVACH-HEFSED-BENIKOI-HOZAHOT>36622.26</REVACH-HEFSED-BENIKOI-HOZAHOT>
+              <SIMAN-REVACH-HEFSED>1</SIMAN-REVACH-HEFSED>
+              <ACHUZ-TSUA-BRUTO-CHS-2 p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <ACHUZ-TSUA-MUVTAHT p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+            </Tsua>
+            <PirteiTaktziv>
+              <PirteiOved>
+                <SUG-TOCHNIT-O-CHESHBON>4</SUG-TOCHNIT-O-CHESHBON>
+                <MPR-MAASIK-BE-YATZRAN>0000000069641793</MPR-MAASIK-BE-YATZRAN>
+                <STATUS-MAASIK p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SUG-BAAL-HAPOLISA-SHE-EINO-HAMEVUTACH>3</SUG-BAAL-HAPOLISA-SHE-EINO-HAMEVUTACH>
+                <MISPAR-BAAL-POLISA-SHEEINO-MEVUTAH>069641793</MISPAR-BAAL-POLISA-SHEEINO-MEVUTAH>
+                <SHEM-BAAL-POLISA-SHEEINO-MEVUTAH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PirteiOved>
+              <PirteiHaasaka>
+                <KOD-CHISHUV-SACHAR-POLISA-O-HESHBON p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SACHAR-POLISA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-OFEN-HATZMADA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-MASKORET p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <ZAKAUT-LELO-TNAI p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SEIF-14 p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-TCHILAT-TASHLUM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PirteiHaasaka>
+              <PerutHafrashotLePolisa>
+                <SUG-HAMAFKID>1</SUG-HAMAFKID>
+                <SUG-HAFRASHA>10</SUG-HAFRASHA>
+                <ACHUZ-HAFRASHA>100.00</ACHUZ-HAFRASHA>
+                <SCHUM-HAFRASHA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-MADAD>20251015</TAARICH-MADAD>
+              </PerutHafrashotLePolisa>
+              <PerutMasluleiHashkaa>
+                <KOD-SUG-MASLUL>1</KOD-SUG-MASLUL>
+                <KOD-SUG-HAFRASHA>1</KOD-SUG-HAFRASHA>
+                <ACHUZ-HAFKADA-LEHASHKAA>0.00</ACHUZ-HAFKADA-LEHASHKAA>
+                <SCHUM-TZVIRA-BAMASLUL>166254.91</SCHUM-TZVIRA-BAMASLUL>
+                <SHEM-MASLUL-HASHKAA>קרן י משתתף ברווחים</SHEM-MASLUL-HASHKAA>
+                <SHEUR-DMEI-NIHUL-HAFKADA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HAFKADA-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <DMEI-NIHUL-ACHERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TSUA-NETO p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-MASLUL-HASHKAA>520023185401700000006770000012</KOD-MASLUL-HASHKAA>
+                <SHIUR-ALUT-SHNATIT-ZPUIA-LMSLUL-HASHKAH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PerutMasluleiHashkaa>
+              <PerutMasluleiHashkaa>
+                <KOD-SUG-MASLUL>1</KOD-SUG-MASLUL>
+                <KOD-SUG-HAFRASHA>2</KOD-SUG-HAFRASHA>
+                <ACHUZ-HAFKADA-LEHASHKAA>0.00</ACHUZ-HAFKADA-LEHASHKAA>
+                <SCHUM-TZVIRA-BAMASLUL>81316.07</SCHUM-TZVIRA-BAMASLUL>
+                <SHEM-MASLUL-HASHKAA>קרן י משתתף ברווחים</SHEM-MASLUL-HASHKAA>
+                <SHEUR-DMEI-NIHUL-HAFKADA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HAFKADA-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <DMEI-NIHUL-ACHERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TSUA-NETO p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-MASLUL-HASHKAA>520023185401700000006770000012</KOD-MASLUL-HASHKAA>
+                <SHIUR-ALUT-SHNATIT-ZPUIA-LMSLUL-HASHKAH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PerutMasluleiHashkaa>
+              <PerutMasluleiHashkaa>
+                <KOD-SUG-MASLUL>1</KOD-SUG-MASLUL>
+                <KOD-SUG-HAFRASHA>3</KOD-SUG-HAFRASHA>
+                <ACHUZ-HAFKADA-LEHASHKAA>0.00</ACHUZ-HAFKADA-LEHASHKAA>
+                <SCHUM-TZVIRA-BAMASLUL>114433.82</SCHUM-TZVIRA-BAMASLUL>
+                <SHEM-MASLUL-HASHKAA>קרן י משתתף ברווחים</SHEM-MASLUL-HASHKAA>
+                <SHEUR-DMEI-NIHUL-HAFKADA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HAFKADA-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <DMEI-NIHUL-ACHERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TSUA-NETO p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-MASLUL-HASHKAA>520023185401700000006770000012</KOD-MASLUL-HASHKAA>
+                <SHIUR-ALUT-SHNATIT-ZPUIA-LMSLUL-HASHKAH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PerutMasluleiHashkaa>
+              <PerutMasluleiHashkaa>
+                <KOD-SUG-MASLUL>1</KOD-SUG-MASLUL>
+                <KOD-SUG-HAFRASHA>10</KOD-SUG-HAFRASHA>
+                <ACHUZ-HAFKADA-LEHASHKAA>0.00</ACHUZ-HAFKADA-LEHASHKAA>
+                <SCHUM-TZVIRA-BAMASLUL>5524.18</SCHUM-TZVIRA-BAMASLUL>
+                <SHEM-MASLUL-HASHKAA>קרן י משתתף ברווחים</SHEM-MASLUL-HASHKAA>
+                <SHEUR-DMEI-NIHUL-HAFKADA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HAFKADA-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEUR-DMEI-NIHUL-HISACHON-MIVNE p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <DMEI-NIHUL-ACHERIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TSUA-NETO p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-MASLUL-HASHKAA>520023185401700000006770000012</KOD-MASLUL-HASHKAA>
+                <SHIUR-ALUT-SHNATIT-ZPUIA-LMSLUL-HASHKAH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PerutMasluleiHashkaa>
+              <NetuneiGvia>
+                <SHEM-MESHALEM>זיו ויוי</SHEM-MESHALEM>
+                <SUG-TEUDA-MESHALEM>3</SUG-TEUDA-MESHALEM>
+                <MISPAR-ZIHUY-MESHALEM>0000000069641793</MISPAR-ZIHUY-MESHALEM>
+                <KOD-EMTZAEI-TASHLUM>5</KOD-EMTZAEI-TASHLUM>
+                <TADIRUT-TASHLUM>4</TADIRUT-TASHLUM>
+                <CHODESH-YECHUS>1</CHODESH-YECHUS>
+                <YOM-GVIYA-BECHODESH>10</YOM-GVIYA-BECHODESH>
+                <OFEN-HATZMADAT-GVIA>2</OFEN-HATZMADAT-GVIA>
+                <ACHUZ-TAT-SHNATIYOT>0.08</ACHUZ-TAT-SHNATIYOT>
+              </NetuneiGvia>
+              <HafkadotShnatiyot>
+                <TOTAL-HAFKADOT-OVED-TAGMULIM-SHANA-NOCHECHIT>0.00</TOTAL-HAFKADOT-OVED-TAGMULIM-SHANA-NOCHECHIT>
+                <TOTAL-HAFKADOT-MAAVID-TAGMULIM-SHANA-NOCHECHIT>0.00</TOTAL-HAFKADOT-MAAVID-TAGMULIM-SHANA-NOCHECHIT>
+                <TOTAL-HAFKADOT-PITZUIM-SHANA-NOCHECHIT>0.00</TOTAL-HAFKADOT-PITZUIM-SHANA-NOCHECHIT>
+              </HafkadotShnatiyot>
+              <MeshichaNiud>
+                <KOD-SUG-PEULA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <RACHIV-NIMSHACH-NUYAD p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SCHOOM-MESHICHA-NIUD p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-BIZOA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <TAARICH-ERECH p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KNAS-MESHICHA-NIUD p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <KOD-MEZAHE-KOPA-MEKABELET p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <SHEM-KOPA-MEKABELET p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <ILAT-HAAVARA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <MOED-KOVEA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </MeshichaNiud>
+              <ChovotPigurim>
+                <ChovPigur>
+                  <KAYAM-CHOV-O-PIGUR>2</KAYAM-CHOV-O-PIGUR>
+                  <TAARICH-TECHILAT-PIGUR p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TAARICH-TECHILAT-PIGUR-NOCHECHI p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <MISPAR-CHODSHEI-PIGUR p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SUG-HOV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TOTAL-CHOVOT-O-PIGURIM p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <KSAFIM-LO-MESHUYACHIM-MAASIK p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                </ChovPigur>
+              </ChovotPigurim>
+              <PerutHotzaot>
+                <HotzaotBafoalLehodeshDivoach>
+                  <SHEUR-DMEI-NIHUL-HAFKADA>0.00</SHEUR-DMEI-NIHUL-HAFKADA>
+                  <TOTAL-DMEI-NIHUL-HAFKADA>0.00</TOTAL-DMEI-NIHUL-HAFKADA>
+                  <SHEUR-DMEI-NIHUL-TZVIRA>0.2200</SHEUR-DMEI-NIHUL-TZVIRA>
+                  <TOTAL-DMEI-NIHUL-TZVIRA>824.87</TOTAL-DMEI-NIHUL-TZVIRA>
+                  <SACH-DMEI-NIHUL-ACHERIM>0.00</SACH-DMEI-NIHUL-ACHERIM>
+                  <HOTZOT-NIHUL-ASHKAOT p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TOTAL-DMEI-NIHUL-POLISA-O-HESHBON>5300.67</TOTAL-DMEI-NIHUL-POLISA-O-HESHBON>
+                  <DEMI-AAVARAT-MASLOL p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <DMEI-NIUL-MENAEL-TIKIM p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <MEMOTZA-SHEUR-DMEI-NIHUL-HAFKADA>0.0000</MEMOTZA-SHEUR-DMEI-NIHUL-HAFKADA>
+                  <MEMOTZA-TOTAL-DMEI-NIHUL-HAFKADA>0.00</MEMOTZA-TOTAL-DMEI-NIHUL-HAFKADA>
+                  <OFEN-GEVIAT-DMEI-BITUACH p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SACH-DMEI-BITUAH-SHENIGBOO>0.00</SACH-DMEI-BITUAH-SHENIGBOO>
+                </HotzaotBafoalLehodeshDivoach>
+                <MivneDmeiNihul>
+                  <PerutMivneDmeiNihul>
+                    <GOVA-DMEI-NIHUL-NIKBA-AL-PI-HOTZAOT-BAPOAL>2</GOVA-DMEI-NIHUL-NIKBA-AL-PI-HOTZAOT-BAPOAL>
+                    <SUG-HOTZAA>1</SUG-HOTZAA>
+                    <KOD-MASLUL-DMEI-NIHUL>520023185000000000000000000615</KOD-MASLUL-DMEI-NIHUL>
+                    <MEAFYENEI-MASLUL-DMEI-NIHUL>6</MEAFYENEI-MASLUL-DMEI-NIHUL>
+                    <SHEUR-DMEI-NIHUL>0.6000</SHEUR-DMEI-NIHUL>
+                    <TAARICH-IDKUN-SHEUR-DNHL>19960401</TAARICH-IDKUN-SHEUR-DNHL>
+                    <DMEI-NIHUL-ACHIDIM>1</DMEI-NIHUL-ACHIDIM>
+                    <KOD-MASLUL-HASHKAA-BAAL-DMEI-NIHUL-YECHUDIIM p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <OFEN-HAFRASHA>0</OFEN-HAFRASHA>
+                    <SCHUM-MAX-DNHL-HAFKADA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <SACH-DMEI-NIHUL-MASLUL p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <DMEI-NIHUL-ACHERIM p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <KENAS-MESHICHAT-KESAFIM>2</KENAS-MESHICHAT-KESAFIM>
+                    <KAYEMET-HATAVA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <SUG-HATAVA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <ACHOZ-HATAVA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TAARICH-SIUM-HATAVA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                  </PerutMivneDmeiNihul>
+                </MivneDmeiNihul>
+              </PerutHotzaot>
+              <PerutYitrotLesofShanaKodemet>
+                <YITRAT-SOF-SHANA>336207.38</YITRAT-SOF-SHANA>
+                <ERECH-PIDYON-SOF-SHANA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <ERECH-MESOLAK-SOF-SHANA p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <YISKON-YITRAT-KESAFIM p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+              </PerutYitrotLesofShanaKodemet>
+              <BlockItrot>
+                <Yitrot>
+                  <TAARICH-ERECH-TZVIROT>20250930</TAARICH-ERECH-TZVIROT>
+                  <PerutYitrot>
+                    <KOD-SUG-ITRA>2</KOD-SUG-ITRA>
+                    <KOD-SUG-HAFRASHA>1</KOD-SUG-HAFRASHA>
+                    <TOTAL-CHISACHON-MTZBR>166254.91</TOTAL-CHISACHON-MTZBR>
+                    <TOTAL-ERKEI-PIDION>166254.91</TOTAL-ERKEI-PIDION>
+                  </PerutYitrot>
+                  <PerutYitrot>
+                    <KOD-SUG-ITRA>2</KOD-SUG-ITRA>
+                    <KOD-SUG-HAFRASHA>2</KOD-SUG-HAFRASHA>
+                    <TOTAL-CHISACHON-MTZBR>81316.14</TOTAL-CHISACHON-MTZBR>
+                    <TOTAL-ERKEI-PIDION>81316.07</TOTAL-ERKEI-PIDION>
+                  </PerutYitrot>
+                  <PerutYitrot>
+                    <KOD-SUG-ITRA>2</KOD-SUG-ITRA>
+                    <KOD-SUG-HAFRASHA>3</KOD-SUG-HAFRASHA>
+                    <TOTAL-CHISACHON-MTZBR>114433.76</TOTAL-CHISACHON-MTZBR>
+                    <TOTAL-ERKEI-PIDION>114433.82</TOTAL-ERKEI-PIDION>
+                  </PerutYitrot>
+                  <PerutYitrot>
+                    <KOD-SUG-ITRA>2</KOD-SUG-ITRA>
+                    <KOD-SUG-HAFRASHA>10</KOD-SUG-HAFRASHA>
+                    <TOTAL-CHISACHON-MTZBR>5524.16</TOTAL-CHISACHON-MTZBR>
+                    <TOTAL-ERKEI-PIDION>5524.17</TOTAL-ERKEI-PIDION>
+                  </PerutYitrot>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>1</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>2</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>56123.32</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>1</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>3</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>84195.51</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>2</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>2</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>25192.75</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>2</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>3</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>30238.31</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>9</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>1</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>166254.91</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <PerutYitraLeTkufa>
+                    <KOD-TECHULAT-SHICHVA>10</KOD-TECHULAT-SHICHVA>
+                    <TIKRAT-HAFKADA-MUTEVET p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <REKIV-ITRA-LETKUFA>10</REKIV-ITRA-LETKUFA>
+                    <SUG-ITRA-LETKUFA>2</SUG-ITRA-LETKUFA>
+                    <SACH-ITRA-LESHICHVA-BESHACH>5524.17</SACH-ITRA-LESHICHVA-BESHACH>
+                  </PerutYitraLeTkufa>
+                  <YitrotShonot>
+                    <TZVIRAT-PITZUIM-PTURIM-MAAVIDIM-KODMIM p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <ERECH-PIDION-PITZUIM-LEKITZBA-MAAVIDIM-KODMIM p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TZVIRAT-PITZUIM-MAAVIDIM-KODMIM-BERETZEF-KITZBA>166254.91</TZVIRAT-PITZUIM-MAAVIDIM-KODMIM-BERETZEF-KITZBA>
+                    <TZVIRAT-PITZUIM-MAAVIDIM-KODMIM-BERETZEF-ZECHUYOT p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TZVIRAT-PITZUIM-31-12-1999-LEKITZBA p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <ERECH-PIDION-PITZUIM-MAASIK-NOCHECHI>0.00</ERECH-PIDION-PITZUIM-MAASIK-NOCHECHI>
+                    <ERECH-PIDION-MARKIV-PITZUIM-LEMAS-NOCHECHI>0.00</ERECH-PIDION-MARKIV-PITZUIM-LEMAS-NOCHECHI>
+                    <ERECH-PIDION-PITZUIM-MAAVIDIM-KODMIM-RETZEF-ZEHUYUT p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <ERECH-PIDION-PITZUIM-LEHON-MAAVIDIM-KODMIM p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <YITRAT-PITZUIM-LELO-HITCHASHBENOT p8:nil="true" xmlns:p8="http://www.w3.org/2001/XMLSchema-instance" />
+                    <KAYAM-RETZEF-PITZUIM-KITZBA>1</KAYAM-RETZEF-PITZUIM-KITZBA>
+                    <KAYAM-RETZEF-ZECHUYOT-PITZUIM>2</KAYAM-RETZEF-ZECHUYOT-PITZUIM>
+                  </YitrotShonot>
+                </Yitrot>
+              </BlockItrot>
+            </PirteiTaktziv>
+            <PerutMeyupeKoach>
+              <KAYAM-MEYUPE-KOACH>1</KAYAM-MEYUPE-KOACH>
+              <SUG-ZIHUY>2</SUG-ZIHUY>
+              <MEYOPE-ZIHUY>1</MEYOPE-ZIHUY>
+              <HARSHAA-LEBITZUAE-PEULA>1</HARSHAA-LEBITZUAE-PEULA>
+              <MISPAR-ZIHUY>513529867</MISPAR-ZIHUY>
+              <TAARICH-MINUY-SOCHEN>20190116</TAARICH-MINUY-SOCHEN>
+              <SHEM-MEYUPE-KOACH>קרדו ביטוח (2004) בע"מ</SHEM-MEYUPE-KOACH>
+              <TAARICH-TOM-TOKEF-YEPUI-KOACH>2029-01-15</TAARICH-TOM-TOKEF-YEPUI-KOACH>
+            </PerutMeyupeKoach>
+            <Kisuim>
+              <ZihuiKisui>
+                <MISPAR-KISUI-BE-YATZRAN>520023185401700000006770000000</MISPAR-KISUI-BE-YATZRAN>
+                <SHEM-KISUI-YATZRAN>מניב משתתף</SHEM-KISUI-YATZRAN>
+                <SUG-KISUI-ETZEL-YATZRAN>1</SUG-KISUI-ETZEL-YATZRAN>
+                <MISPAR-POLISA-O-HESHBON-NEGDI p6:nil="true" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance" />
+                <PirteiMevutach>
+                  <SUG-TEUDA>1</SUG-TEUDA>
+                  <MISPAR-ZIHUY-LAKOACH>0000000069641793</MISPAR-ZIHUY-LAKOACH>
+                </PirteiMevutach>
+                <SchumeiBituahYesodi>
+                  <KOD-MUTZAR-LEFI-KIDUD-ACHID-LAYESODI>520023185401700000006770000000</KOD-MUTZAR-LEFI-KIDUD-ACHID-LAYESODI>
+                  <SUG-HATZMADA-SCHUM-BITUAH>2</SUG-HATZMADA-SCHUM-BITUAH>
+                  <SUG-HATZMADA-DMEI-BITUAH>2</SUG-HATZMADA-DMEI-BITUAH>
+                  <SUG-MASLUL-LEBITUAH>1</SUG-MASLUL-LEBITUAH>
+                  <IND-SCHUM-BITUAH-KOLEL-CHISACHON>1</IND-SCHUM-BITUAH-KOLEL-CHISACHON>
+                  <SCHUM-BITUACH-LEMASLUL>295553.01</SCHUM-BITUACH-LEMASLUL>
+                  <MISPAR-MASKOROT p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <ACHUZ-HAKTZAA-LE-CHISACHON p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TIKRAT-GAG-HATAM-LEMIKRE-MAVET>1670818.00</TIKRAT-GAG-HATAM-LEMIKRE-MAVET>
+                  <SCHUM-BITUAH-LEMAVET>367528.97</SCHUM-BITUAH-LEMAVET>
+                </SchumeiBituahYesodi>
+                <PirteiTosafot>
+                  <TOSEFET-TAARIF>2</TOSEFET-TAARIF>
+                  <KOD-SUG-TOSEFET p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SHEUR-TOSEFET p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <PROMIL-TOSEFET p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TAARICH-TOM-TOSEFET p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                </PirteiTosafot>
+                <Mutav>
+                  <SUG-ZIHUY-MUTAV>7</SUG-ZIHUY-MUTAV>
+                  <KOD-ZIHUY-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <MISPAR-ZIHUY-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SHEM-PRATI-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SHEM-MISHPACHA-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <TAARICH-LEIDA-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <SUG-ZIKA p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <ACHUZ-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <HAGDARAT-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <MAHUT-MUTAV p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                </Mutav>
+                <Miktsoa-Isuk-Tachviv>
+                  <TACHVIVIM-O-ISUKIM p7:nil="true" xmlns:p7="http://www.w3.org/2001/XMLSchema-instance" />
+                  <KOD-MIKTZOA>כימאי/ת מחקר ופתוח אל) (הישעתב</KOD-MIKTZOA>
+                  <TCHUM-ISUK-CHADASH>כימאי/ת מחקר ופתוח אל) (הישעתב</TCHUM-ISUK-CHADASH>
+                </Miktsoa-Isuk-Tachviv>
+              </ZihuiKisui>
+            </Kisuim>
+          </HeshbonOPolisa>
+        </HeshbonotOPolisot>
+      </Mutzar>
+    </Mutzarim>
+  </YeshutYatzran>
+  <ReshumatSgira>
+    <KAMUT-YATZRANIM>000000001</KAMUT-YATZRANIM>
+    <KAMUT-METAFELIM>000000001</KAMUT-METAFELIM>
+    <KAMUT-MUTZARIM>000000001</KAMUT-MUTZARIM>
+    <KAMUT-YESHUYOT-MAASIK>000000001</KAMUT-YESHUYOT-MAASIK>
+    <KAMUT-YESHUYOT-MEFITZ>000000001</KAMUT-YESHUYOT-MEFITZ>
+    <MISPAR-YESHUYUT-LAKOACH-BAKOVETZ>000000001</MISPAR-YESHUYUT-LAKOACH-BAKOVETZ>
+    <KAMUT-POLISOT>000000001</KAMUT-POLISOT>
+  </ReshumatSgira>
+</Mimshak>

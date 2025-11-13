@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="upload-container">
+    <h2 class="text-center mb-4">העלאת קבצי מסלקה</h2>
+    <p class="text-center text-muted mb-4">אנא בחר את קבצי ה-XML של המסלקה לעיבוד</p>
+    
+    <form method="post" enctype="multipart/form-data">
+        <div class="file-upload">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="file" name="file" multiple accept=".xml" required>
+                <label class="input-group-text" for="file">בחר קבצים</label>
+            </div>
+            <p class="text-muted small">ניתן לבחור מספר קבצים בו זמנית (פורמט XML בלבד)</p>
+        </div>
+        
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-upload"></i> העלה ועבד קבצים
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
