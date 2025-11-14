@@ -159,6 +159,7 @@ class PensionFileProcessor:
     def _extract_data(self) -> dict:
         """Extract account data from the XML file using a generic approach."""
         accounts = []
+        person_details = self._extract_person_details()
         
         # Try different possible account element names
         account_elements = [
@@ -289,8 +290,108 @@ class PensionFileProcessor:
         return {
             'file': os.path.basename(self.file_path),
             'accounts': accounts,
+            'person_details': person_details,
             'processed_at': datetime.now().isoformat()
         }
+
+    def _extract_person_details(self) -> dict[str, str]:
+        """Extract personal details of the main client (if present)."""
+        details: dict[str, str] = {}
+        if self.root is None:
+            return details
+
+        candidate_paths = [
+            './/YeshutLakoach',
+            './/Lakoach',
+        ]
+        customer_elem = None
+        for path in candidate_paths:
+            customer_elem = self.root.find(path)
+            if customer_elem is not None:
+                break
+
+        if customer_elem is None:
+            return details
+
+        raw_id = (
+            self._get_text(customer_elem, 'MISPAR-ZIHUY-LAKOACH')
+            or self._get_text(customer_elem, 'MISPAR-ZEHUT')
+            or self._get_text(customer_elem, 'MISPAR-ZIHUY')
+        )
+        if raw_id:
+            clean_id = raw_id.lstrip('0') or raw_id
+            details['id_number'] = clean_id
+
+        first_name = (
+            self._get_text(customer_elem, 'SHEM-PRATI')
+            or self._get_text(customer_elem, 'SHEM-PRATI-LAKOACH')
+        )
+        last_name = (
+            self._get_text(customer_elem, 'SHEM-MISHPACHA')
+            or self._get_text(customer_elem, 'SHEM-MISHPACHA-LAKOACH')
+        )
+        if first_name or last_name:
+            full_name_parts = [part for part in [first_name, last_name] if part]
+            details['full_name'] = ' '.join(full_name_parts)
+
+        birth_raw = (
+            self._get_text(customer_elem, 'TAARICH-LEIDA')
+            or self._get_text(customer_elem, 'TAARICH-LEYDA')
+        )
+        if birth_raw:
+            details['birth_date'] = self._format_date(birth_raw)
+
+        address_elem = customer_elem
+        country = self._get_text(address_elem, 'ERETZ')
+        city = self._get_text(address_elem, 'SHEM-YISHUV')
+        street = self._get_text(address_elem, 'SHEM-RECHOV')
+        house = self._get_text(address_elem, 'MISPAR-BAIT')
+        entrance = self._get_text(address_elem, 'MISPAR-KNISA')
+        apartment = self._get_text(address_elem, 'MISPAR-DIRA')
+        zip_code = self._get_text(address_elem, 'MIKUD')
+
+        address_parts: list[str] = []
+        if street:
+            street_part = street
+            if house:
+                street_part = f"{street_part} {house}"
+            if entrance:
+                street_part = f"{street_part}, כניסה {entrance}"
+            if apartment:
+                street_part = f"{street_part}, דירה {apartment}"
+            address_parts.append(street_part)
+
+        if city:
+            address_parts.append(city)
+        if zip_code:
+            address_parts.append(f"מיקוד {zip_code}")
+        if country:
+            address_parts.append(country)
+
+        if address_parts:
+            details['full_address'] = ', '.join(address_parts)
+
+        phone = self._get_text(customer_elem, 'MISPAR-TELEPHONE-KAVI')
+        if phone:
+            details['phone'] = phone
+
+        mobile = self._get_text(customer_elem, 'MISPAR-CELLULARI')
+        if mobile:
+            details['mobile'] = mobile
+
+        email = self._find_text_anywhere(customer_elem, 'E-MAIL')
+        if email:
+            details['email'] = email
+
+        gender = self._get_text(customer_elem, 'MIN')
+        if gender:
+            details['gender_code'] = gender
+            if gender == '1':
+                details['gender'] = 'זכר'
+            elif gender == '2':
+                details['gender'] = 'נקבה'
+
+        return details
     
     def _find_balance(self, account_elem) -> float:
         """Return the best-estimate balance for an account."""

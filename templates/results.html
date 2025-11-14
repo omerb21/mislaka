@@ -51,6 +51,26 @@
             </table>
         </div>
 
+        {% if person_details %}
+        <div class="card-body">
+            <h6 class="mb-3">פרטי הלקוח</h6>
+            <div class="row mb-2">
+                <div class="col-md-4"><strong>שם הלקוח:</strong> {{ person_details.full_name or '' }}</div>
+                <div class="col-md-4"><strong>מספר תעודת זהות:</strong> {{ person_details.id_number or '' }}</div>
+                <div class="col-md-4"><strong>תאריך לידה:</strong> {{ person_details.birth_date or '' }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-8"><strong>כתובת מלאה:</strong> {{ person_details.full_address or '' }}</div>
+                <div class="col-md-4"><strong>מין:</strong> {{ person_details.gender or person_details.gender_code or '' }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-4"><strong>טלפון:</strong> {{ person_details.phone or '' }}</div>
+                <div class="col-md-4"><strong>נייד:</strong> {{ person_details.mobile or '' }}</div>
+                <div class="col-md-4"><strong>דוא"ל:</strong> {{ person_details.email or '' }}</div>
+            </div>
+        </div>
+        {% endif %}
+
         <div class="card-footer d-flex justify-content-between align-items-center">
             <div class="footer-info">
                 <span class="label">עודכן לאחרונה:</span>

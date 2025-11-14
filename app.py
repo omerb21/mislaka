@@ -148,6 +148,7 @@ def upload_file():
 
         # Process each file
         all_rows = []
+        combined_person_details: dict[str, str] = {}
         for file in files:
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
@@ -159,6 +160,11 @@ def upload_file():
                     result = process_pension_file(filepath)
                     if result:
                         all_rows.extend(flatten_accounts(result))
+                        person = result.get('person_details') or {}
+                        if isinstance(person, dict):
+                            for key, value in person.items():
+                                if value and not combined_person_details.get(key):
+                                    combined_person_details[key] = value
                 except Exception as e:
                     flash(f'שגיאה בעיבוד הקובץ {filename}: {str(e)}', 'error')
                     continue
@@ -215,6 +221,7 @@ def upload_file():
                 numeric_columns=numeric_cols,
                 numeric_column_indexes=numeric_column_indexes,
                 wide_layout=True,
+                person_details=combined_person_details,
             )
         else:
             flash('לא בוצע עיבוד של קבצים', 'error')
