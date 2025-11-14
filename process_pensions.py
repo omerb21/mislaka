@@ -603,6 +603,9 @@ class PensionFileProcessor:
         name_type: str | None = None
         for name in plan_names:
             name_lower = name.lower()
+            if 'גמל להשקעה' in name or 'קופת גמל להשקעה' in name:
+                name_type = 'גמל להשקעה'
+                break
             if 'השתלמות' in name:
                 name_type = 'קרן השתלמות'
                 break
