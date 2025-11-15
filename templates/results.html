@@ -69,6 +69,91 @@
                 <div class="col-md-4"><strong>דוא"ל:</strong> {{ person_details.email or '' }}</div>
             </div>
         </div>
+        <div class="card-body border-top pt-2">
+            <h6 class="mb-2">פרטים אישיים מורחבים</h6>
+            <div class="row mb-1 small">
+                {% if person_details.previous_last_name %}
+                <div class="col-md-3"><strong>שם משפחה קודם:</strong> {{ person_details.previous_last_name }}</div>
+                {% endif %}
+                {% if person_details.marital_status or person_details.marital_status_code %}
+                <div class="col-md-3"><strong>מצב משפחתי:</strong> {{ person_details.marital_status or person_details.marital_status_code }}</div>
+                {% endif %}
+            </div>
+            <div class="row mb-1 small">
+                {% if person_details.street %}
+                <div class="col-md-3"><strong>רחוב:</strong> {{ person_details.street }}</div>
+                {% endif %}
+                {% if person_details.house_number %}
+                <div class="col-md-3"><strong>מספר בית:</strong> {{ person_details.house_number }}</div>
+                {% endif %}
+                {% if person_details.entrance %}
+                <div class="col-md-3"><strong>כניסה:</strong> {{ person_details.entrance }}</div>
+                {% endif %}
+                {% if person_details.apartment %}
+                <div class="col-md-3"><strong>דירה:</strong> {{ person_details.apartment }}</div>
+                {% endif %}
+            </div>
+            <div class="row mb-1 small">
+                {% if person_details.city %}
+                <div class="col-md-3"><strong>יישוב:</strong> {{ person_details.city }}</div>
+                {% endif %}
+                {% if person_details.zip_code %}
+                <div class="col-md-3"><strong>מיקוד:</strong> {{ person_details.zip_code }}</div>
+                {% endif %}
+                {% if person_details.po_box %}
+                <div class="col-md-3"><strong>ת.ד.:</strong> {{ person_details.po_box }}</div>
+                {% endif %}
+            </div>
+            <div class="row mb-1 small">
+                {% if person_details.death_date %}
+                <div class="col-md-3"><strong>תאריך פטירה:</strong> {{ person_details.death_date }}</div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if beneficiaries %}
+        <div class="card-body border-top pt-2">
+            <h6 class="mb-2">מוטבים / שארים</h6>
+            <div class="table-responsive small">
+                <table class="table table-sm table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>סוג רשומה</th>
+                            <th>מספר חשבון</th>
+                            <th>שם תכנית</th>
+                            <th>סוג מוצר</th>
+                            <th>חברה מנהלת</th>
+                            <th>תעודת זהות</th>
+                            <th>שם פרטי</th>
+                            <th>שם משפחה</th>
+                            <th>תאריך לידה</th>
+                            <th>קוד קרבה</th>
+                            <th>אחוז זכאות</th>
+                            <th>קוד הגדרה</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for b in beneficiaries %}
+                        <tr>
+                            <td>{{ b.record_type or '' }}</td>
+                            <td>{{ b.account_number or '' }}</td>
+                            <td>{{ b.plan_name or '' }}</td>
+                            <td>{{ b.product_type or '' }}</td>
+                            <td>{{ b.managing_company or '' }}</td>
+                            <td>{{ b.id_number or '' }}</td>
+                            <td>{{ b.first_name or '' }}</td>
+                            <td>{{ b.last_name or '' }}</td>
+                            <td>{{ b.birth_date or '' }}</td>
+                            <td>{{ b.relation_code or '' }}</td>
+                            <td>{{ b.percent or '' }}</td>
+                            <td>{{ b.definition_code or '' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         {% endif %}
 
         <div class="card-footer d-flex justify-content-between align-items-center">

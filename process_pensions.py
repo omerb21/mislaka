@@ -160,6 +160,7 @@ class PensionFileProcessor:
         """Extract account data from the XML file using a generic approach."""
         accounts = []
         person_details = self._extract_person_details()
+        beneficiaries: list[dict[str, Any]] = []
         
         # Try different possible account element names
         account_elements = [
@@ -286,11 +287,21 @@ class PensionFileProcessor:
                     balance_diff
                 )
             accounts.append(acc_data)
+            beneficiaries.extend(
+                self._collect_beneficiaries_for_account(
+                    account,
+                    acc_number,
+                    plan,
+                    product_type,
+                    acc_data['חברה_מנהלת'],
+                )
+            )
         
         return {
             'file': os.path.basename(self.file_path),
             'accounts': accounts,
             'person_details': person_details,
+            'beneficiaries': beneficiaries,
             'processed_at': datetime.now().isoformat()
         }
 
@@ -322,6 +333,13 @@ class PensionFileProcessor:
             clean_id = raw_id.lstrip('0') or raw_id
             details['id_number'] = clean_id
 
+        id_type_code = (
+            self._get_text(customer_elem, 'SUG-MEZAHE-LAKOACH')
+            or self._get_text(customer_elem, 'KOD-ZIHUY-LAKOACH')
+        )
+        if id_type_code:
+            details['id_type_code'] = id_type_code
+
         first_name = (
             self._get_text(customer_elem, 'SHEM-PRATI')
             or self._get_text(customer_elem, 'SHEM-PRATI-LAKOACH')
@@ -333,6 +351,10 @@ class PensionFileProcessor:
         if first_name or last_name:
             full_name_parts = [part for part in [first_name, last_name] if part]
             details['full_name'] = ' '.join(full_name_parts)
+
+        previous_last_name = self._get_text(customer_elem, 'SHEM-MISHPACHA-KODEM')
+        if previous_last_name:
+            details['previous_last_name'] = previous_last_name
 
         birth_raw = (
             self._get_text(customer_elem, 'TAARICH-LEIDA')
@@ -349,6 +371,8 @@ class PensionFileProcessor:
         entrance = self._get_text(address_elem, 'MISPAR-KNISA')
         apartment = self._get_text(address_elem, 'MISPAR-DIRA')
         zip_code = self._get_text(address_elem, 'MIKUD')
+        settlement_code = self._get_text(address_elem, 'SEMEL-YESHUV')
+        po_box = self._get_text(address_elem, 'TA-DOAR')
 
         address_parts: list[str] = []
         if street:
@@ -371,6 +395,25 @@ class PensionFileProcessor:
         if address_parts:
             details['full_address'] = ', '.join(address_parts)
 
+        if country:
+            details['country'] = country
+        if city:
+            details['city'] = city
+        if settlement_code:
+            details['settlement_code'] = settlement_code
+        if street:
+            details['street'] = street
+        if house:
+            details['house_number'] = house
+        if entrance:
+            details['entrance'] = entrance
+        if apartment:
+            details['apartment'] = apartment
+        if zip_code:
+            details['zip_code'] = zip_code
+        if po_box:
+            details['po_box'] = po_box
+
         phone = self._get_text(customer_elem, 'MISPAR-TELEPHONE-KAVI')
         if phone:
             details['phone'] = phone
@@ -391,8 +434,35 @@ class PensionFileProcessor:
             elif gender == '2':
                 details['gender'] = 'נקבה'
 
+        marital_status = self._get_text(customer_elem, 'MATZAV-MISHPACHTI')
+        if marital_status:
+            details['marital_status_code'] = marital_status
+            marital_map = {
+                '0': 'לא ידוע',
+                '1': 'רווק/ה',
+                '2': 'נשוי/אה',
+                '3': 'גרוש/ה',
+                '4': 'אלמן/ה',
+                '5': 'פרוד/ה',
+            }
+            text = marital_map.get(marital_status)
+            if text:
+                details['marital_status'] = text
+
+        children_count = self._get_text(customer_elem, 'MISPAR-YELADIM')
+        if children_count:
+            details['children_count'] = children_count
+
+        death_status = self._get_text(customer_elem, 'PTIRA')
+        if death_status:
+            details['death_status_code'] = death_status
+
+        death_date_raw = self._get_text(customer_elem, 'TAARICH-PTIRA')
+        if death_date_raw:
+            details['death_date'] = self._format_date(death_date_raw)
+
         return details
-    
+
     def _find_balance(self, account_elem) -> float:
         """Return the best-estimate balance for an account."""
         # 1. Sum balances reported per track in BlockItrot/PerutYitrot sections
@@ -769,6 +839,76 @@ class PensionFileProcessor:
                 return normalized_code
 
         return ''
+
+    def _collect_beneficiaries_for_account(
+        self,
+        account_elem,
+        account_number: str,
+        plan_name: str,
+        product_type: str,
+        managing_company: str,
+    ) -> list[dict[str, Any]]:
+        results: list[dict[str, Any]] = []
+        base = {
+            'account_number': account_number,
+            'plan_name': plan_name,
+            'product_type': product_type or '',
+            'managing_company': managing_company or '',
+        }
+
+        for mutav in account_elem.findall('.//Mutav'):
+            id_raw = self._get_text(mutav, 'MISPAR-ZIHUY-MUTAV')
+            first = self._get_text(mutav, 'SHEM-PRATI-MUTAV')
+            last = self._get_text(mutav, 'SHEM-MISHPACHA-MUTAV')
+            percent = self._get_text(mutav, 'ACHUZ-MUTAV')
+            if not (id_raw or first or last or percent):
+                continue
+            row = dict(base)
+            row['record_type'] = 'מוטב'
+            if id_raw:
+                clean_id = id_raw.lstrip('0') or id_raw
+                row['id_number'] = clean_id
+            if first:
+                row['first_name'] = first
+            if last:
+                row['last_name'] = last
+            birth_raw = self._get_text(mutav, 'TAARICH-LEIDA-MUTAV')
+            if birth_raw:
+                row['birth_date'] = self._format_date(birth_raw)
+            relation = self._get_text(mutav, 'SUG-ZIKA')
+            if relation:
+                row['relation_code'] = relation
+            if percent:
+                row['percent'] = percent
+            definition = self._get_text(mutav, 'HAGDARAT-MUTAV') or self._get_text(mutav, 'MAHUT-MUTAV')
+            if definition:
+                row['definition_code'] = definition
+            results.append(row)
+
+        for sheer in account_elem.findall('.//NetuneiSheerim//Sheer'):
+            id_raw = self._get_text(sheer, 'MISPAR-ZIHUY-SHEERIM')
+            first = self._get_text(sheer, 'SHEM-PRATI-SHEERIM')
+            last = self._get_text(sheer, 'SHEM-MISHPACHA-SHEERIM')
+            if not (id_raw or first or last):
+                continue
+            row = dict(base)
+            row['record_type'] = 'שאר'
+            if id_raw:
+                clean_id = id_raw.lstrip('0') or id_raw
+                row['id_number'] = clean_id
+            if first:
+                row['first_name'] = first
+            if last:
+                row['last_name'] = last
+            birth_raw = self._get_text(sheer, 'TAARICH-LEIDA')
+            if birth_raw:
+                row['birth_date'] = self._format_date(birth_raw)
+            relation = self._get_text(sheer, 'SUG-ZIKA')
+            if relation:
+                row['relation_code'] = relation
+            results.append(row)
+
+        return results
 
     def _collect_employer_names(self, account_elem) -> list[str]:
         names: list[str] = []
